@@ -7,4 +7,25 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'popup';
+  selectedOption: string = '';
+  showPopup = false;
+
+  options: string[] = [
+    'electronics',
+    'jewelry',
+    "men's clothing",
+    "women's clothing",
+  ];
+  
+  selectOption(option: string) {
+    this.selectedOption = option;
+  }
+
+  openPopup() {
+    this.showPopup = true;
+  }
+
+  closePopup() {
+    this.showPopup = false;
+  }
 }
